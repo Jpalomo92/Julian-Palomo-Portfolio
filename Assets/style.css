@@ -1,0 +1,111 @@
+/*Scrolls you down the page once you click on a link*/
+html {
+    scroll-behavior: smooth;
+  }
+
+body {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.5;
+  }
+
+  /*lines the header and links side by side*/
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1%;
+    background-color: #13293d;
+    color: #fff;
+  }
+
+  h1 {
+    font-size: 273%;
+    margin-left: 100px;
+  }
+
+  /*Selector that spaced out the listed links evenly*/
+  nav ul {
+    display: flex;
+    justify-content: space-between;
+    min-width: 400px;
+    list-style: none;
+}
+
+  /*Type selector that formats the links in the header to not be blue nor have an underline*/
+  a { 
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+ }
+
+  main {
+    padding: 10px;
+  }
+
+  main section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: baseline;
+    padding: 1%;
+  }
+
+
+  /*This sets the headers within the main section*/
+  .card-header {
+    font-size: 20px;
+    flex: 0 0 15%;
+    padding: 0.5rem;
+    text-align: right;
+  }
+
+    /*This contains the text within the box sets how much room the section will take in the main*/
+.main-card {
+    flex: 0 0 64%;
+    border-left-style: solid;
+    inline-size: 100%;
+    overflow-wrap: break-word;
+    padding-left: 5px;
+}
+
+.section-space {
+    margin-top: 50px;
+    margin-bottom: 35px;
+    text-align: center;
+
+}
+
+#list-out {
+display: flex;
+justify-content: space-between;
+min-width: 400px;
+list-style: none;
+}
+
+  /*This stacks h1 and links on top of eachother when screen width is reduced to 768px*/
+@media screen and (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+  h1 {
+    margin-left: 0px;
+  }
+}
+
+/*This changes the position of the header and body of the main section*/
+@media screen and (max-width: 1058px) {
+    .card-header {
+      flex-direction: column;
+      text-align: center;
+      flex: 1 0 100%;
+    }
+    .main-card {
+        flex-direction: column;
+        text-align: left;
+        flex: 1 0 100%;
+    }
+  }
+  
