@@ -1,15 +1,15 @@
 /*Scrolls you down the page once you click on a link*/
 html {
     scroll-behavior: smooth;
-
   }
 
+/*Sets the body to a flexbox*/
 body {
-    
     display: flex;
     flex-direction: column;
     line-height: 1.5;
-    background-color: rgb(4, 108, 188);
+    background-color: rgb(56, 87, 113);
+    color: #ffffff;
   }
 
   /*lines the header and links side by side*/
@@ -18,13 +18,11 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 1%;
-    color: #fff;
-
 
   }
-
+  /*Increases h1 font and moves it over to the right*/
   h1 {
-    font-size: 300%;
+    font-size: 350%;
     margin-left: 100px;
   }
 
@@ -32,19 +30,21 @@ body {
   nav ul {
     display: flex;
     justify-content: space-between;
-    min-width: 520px;
+    min-width: 470px;
     list-style: none;
+    transition: 0.9s;
 }
-
+  /*Sets the links to white and removes the underline*/
   a {
     font-family: Arial, Helvetica, sans-serif;
-
     text-decoration: none;
+    color: white;
+
 }
   /*Type selector that formats the links in the header to not be blue nor have an underline*/
-  nav ul a { 
+  nav ul li { 
     font-size: 28px;
-    color: white;
+    transition: 0.2s;
  }
 
   main {
@@ -58,27 +58,37 @@ body {
     align-items: baseline;
     padding: 1%;
   }
- 
-  main ul {
-font-size: 30px;
+
+  main section p {
+    text-indent: 25px;
+    padding-bottom: 10px;
   }
 
-  main ul li a {
-    color: black;
+ section ul li{
+    transition: 0.2s;
+    font-size: 30px;
   }
 
   section h3 {
-    color: white;
+    text-align: center;
+    font-size: 170%;
+    background-color: rgba(0, 0, 0, 0.414);
+    border-radius: 10px 10px 0 0;
+  }
+
+  footer {
+    text-align: center;
+    font-size: 22px;
+    padding: 12px;
   }
 
   .profilepic {
-    padding-top: 90px;
+    padding-top: 100px;
     padding-bottom: 300px;
-    background-image: url(./Images/Profile\ Pic.jpg);
+    background-image: url(./Images/Profile\ Pic.JPG);
     background-size: cover;
-    background-position: 50% 57.5%;
+    background-position: 50% 49.5%;
   }
-
 
 
   /*This sets the headers within the main section*/
@@ -93,16 +103,22 @@ font-size: 30px;
 .main-card {
     flex: 0 0 73%;
     border-left-style: solid;
+    border-color: rgb(9, 62, 9);
     display: inline-block;
     padding-left: 15px;
 
 }
 
-.section-space {
-    margin-top: 50px;
+/*spaces out the My Work section its being applied to*/
+.space {
+    margin-top: 70px;
     margin-bottom: 35px;
-
 }
+
+/*Sets font size for the About Me section*/
+.aboutfont {
+  font-size: 20px;
+  }
 
 /*Create class for the other card elements or all and then separate and id for the main app to make it bigger than the rest*/
 .application {
@@ -110,43 +126,58 @@ font-size: 30px;
     height: 350px;
     display: inline-block;
     border-radius: 10px;
-    padding: 10px 15px;
+    padding: 0px 0px;
     box-sizing: border-box;
     cursor: pointer;
     margin: 10px 15px;
     background-position: center;
     background-size: cover;
+    transition: 0.2s;
 }
 
+/*sets the image for each card in the My work section*/
 .application1 {
-    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(./Images/social-media-marketing.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url(./Images/social-media-marketing.jpg);
     width: 100%;
     height: 300px;
 }
 
 .application2 {
-    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(./Images/bowtie-cat.png);
+    background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url(./Images/bowtie-cat.png);
 }
 
 .application3 {
-    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(./Images/image-1.png);
+    background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url(./Images/image-1.png);
 }
 
-.aboutfont {
-font-size: 17px;
-}
-
+/*Wraps the text in the about me section*/
 #wrap {
     inline-size: 100%;
     overflow-wrap: break-word;
 }
 
+/*Lines up and spaces out the links in the Contact Me section*/
 #list-out {
 display: flex;
 justify-content: space-between;
 min-width: 400px;
 list-style: none;
 
+}
+
+  /*moves the applications up when you hover over each card and link*/
+  nav ul li:hover {
+    transform: translateY(-5px);
+
+  }
+
+.application:hover {
+    transform: translateY(-15px);
+
+  }
+
+section ul li:hover {
+    transform: translateY(-5px);
 }
 
   /*This stacks h1 and links on top of eachother when screen width is reduced to 768px*/
@@ -174,6 +205,11 @@ list-style: none;
         flex-direction: column;
         text-align: left;
         flex: 1 0 100%;
+    }
+
+    section ul li {
+        flex-direction: column;
+        text-align: center;
     }
   }
   
