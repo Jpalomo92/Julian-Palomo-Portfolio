@@ -51,6 +51,7 @@ body {
     padding: 10px;
   }
 
+  /*establishes the sections in the main element as a flexbox*/
   main section {
     display: flex;
     flex-wrap: wrap;
@@ -59,16 +60,19 @@ body {
     padding: 1%;
   }
 
+  /*indents and establishes padding for each paragraph in the About me section*/
   main section p {
     text-indent: 25px;
     padding-bottom: 10px;
   }
 
+  /*sets font size in the Conact Me section*/
  section ul li{
     transition: 0.2s;
     font-size: 30px;
   }
 
+  /*sets the font and background of the header on each card*/
   section h3 {
     text-align: center;
     font-size: 170%;
@@ -76,12 +80,14 @@ body {
     border-radius: 10px 10px 0 0;
   }
 
+  /*places the footer in the center*/
   footer {
     text-align: center;
     font-size: 22px;
     padding: 12px;
   }
 
+  /*sets a background image within the header*/
   .profilepic {
     padding-top: 100px;
     padding-bottom: 300px;
@@ -103,16 +109,10 @@ body {
 .main-card {
     flex: 0 0 73%;
     border-left-style: solid;
-    border-color: rgb(9, 62, 9);
+    border-color: rgb(233, 178, 133);
     display: inline-block;
     padding-left: 15px;
-
-}
-
-/*spaces out the My Work section its being applied to*/
-.space {
-    margin-top: 70px;
-    margin-bottom: 35px;
+    margin-bottom: 100px;
 }
 
 /*Sets font size for the About Me section*/
@@ -120,7 +120,7 @@ body {
   font-size: 20px;
   }
 
-/*Create class for the other card elements or all and then separate and id for the main app to make it bigger than the rest*/
+/*class for each card in the about me section - sets the style and positions the image for each*/
 .application {
     width: 450px;
     height: 350px;
@@ -137,17 +137,17 @@ body {
 
 /*sets the image for each card in the My work section*/
 .application1 {
-    background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url(./Images/social-media-marketing.jpg);
+    background-image: url(./Images/social-media-marketing.jpg);
     width: 100%;
     height: 300px;
 }
 
 .application2 {
-    background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url(./Images/bowtie-cat.png);
+    background-image: url(./Images/bowtie-cat.png);
 }
 
 .application3 {
-    background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url(./Images/image-1.png);
+    background-image: url(./Images/image-1.png);
 }
 
 /*Wraps the text in the about me section*/
@@ -194,7 +194,7 @@ section ul li:hover {
   }
 }
 
-/*This changes the position of the header and body of the main section*/
+/*This changes the position of the header and body of the main section when screen is reduced to 1058px*/
 @media screen and (max-width: 1058px) {
     .card-header {
       flex-direction: column;
